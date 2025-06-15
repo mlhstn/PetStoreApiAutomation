@@ -3,9 +3,7 @@ package Base;
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;
 
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class BaseLibrary extends Data {
 
