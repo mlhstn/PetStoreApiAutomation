@@ -10,7 +10,7 @@ public class UserTests extends BaseTest {
     @Test(description = "Get - /v2/user - UserInfo", priority = 2)
     public void GetUserInfo() {
 
-        Get(URL + "/v2/user/ahmet");
+        Get(URL + "/v2/user/gzd");
 
 
     }
@@ -23,13 +23,13 @@ public class UserTests extends BaseTest {
         headerPayload.put("Content-Type", "application/json");
 
         Map<String, Object> bodyPayload = new HashMap<>();
-        bodyPayload.put("id", "131");
-        bodyPayload.put("username", "ahmet");
-        bodyPayload.put("firstName", "melih");
+        bodyPayload.put("id", "6666");
+        bodyPayload.put("username", "gzd");
+        bodyPayload.put("firstName", "gözde");
         bodyPayload.put("lastName", "üstün");
-        bodyPayload.put("email", "melih@gmail.com");
+        bodyPayload.put("email", "gözde@gmail.com");
         bodyPayload.put("password", "sfsdfsdfs");
-        bodyPayload.put("phone", "4443335522");
+        bodyPayload.put("phone", "12345");
         bodyPayload.put("userStatus", "1");
 
         Post(URL + "/v2/user", headerPayload, bodyPayload);
@@ -45,12 +45,12 @@ public class UserTests extends BaseTest {
 
 
         Map<String, Object> bodyPayload = new HashMap<>();
-        bodyPayload.put("id", "131");
-        bodyPayload.put("username", "melihhhh11");
+        bodyPayload.put("id", "6666");
+        bodyPayload.put("username", "gzd");
         bodyPayload.put("firstName", "melih");
         bodyPayload.put("lastName", "üstün");
-        bodyPayload.put("email", "melih@gmail.com");
-        bodyPayload.put("password", "sfsdfsdfs");
+        bodyPayload.put("email", "gözde@gmail.com");
+        bodyPayload.put("password", "12345");
         bodyPayload.put("phone", "4443335522");
         bodyPayload.put("userStatus", "1");
 
@@ -63,7 +63,7 @@ public class UserTests extends BaseTest {
     public void DeleteUser() {
 
 
-        Delete(URL + "/v2/user/melihhhh11");
+        Delete(URL + "/v2/user/gzd");
 
     }
 
@@ -71,6 +71,8 @@ public class UserTests extends BaseTest {
     public void Login() {
 
         Map<String, Object> queryParamsPayload = new HashMap<>();
+        queryParamsPayload.put("username","ahmet");
+        queryParamsPayload.put("password","sfsdfsdfs");
 
         Get(URL + "/v2/user/login", queryParamsPayload);
     }
